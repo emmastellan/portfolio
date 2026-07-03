@@ -257,6 +257,50 @@ transform-origin: left; transition: transform 0.4s ease;
 .col-8 { grid-column: span 8; }
 .col-12 { grid-column: span 12; }
 
+
+
+
+.col-6 { grid-column: span 6; }
+
+/* MODAL LIGHTBOX (images & vidéos) */
+.modal-overlay {
+  display: none;
+  position: fixed; inset: 0; z-index: 10000;
+  background: rgba(0,0,0,0.92);
+  align-items: center; justify-content: center;
+  padding: 3rem;
+}
+.modal-overlay.active { display: flex; }
+.modal-content {
+  position: relative;
+  max-width: 90vw; max-height: 85vh;
+}
+.modal-content img,
+.modal-content video {
+  max-width: 90vw; max-height: 85vh;
+  display: block;
+  border: 1px solid var(--gold-border);
+}
+.modal-close {
+  position: absolute;
+  top: -3rem; right: 0;
+  width: 40px; height: 40px;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--gold-border);
+  background: var(--card);
+  color: var(--gold);
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background 0.25s, color 0.25s;
+}
+.modal-close:hover { background: var(--gold); color: #0E0E0E; }
+
+.project-link.is-button { background: none; border: none; padding: 0; }
+
+
+
+
+
 .project-num {
 font-family: var(--font-display);
 font-size: 0.85rem; font-style: italic;
@@ -486,11 +530,11 @@ body { cursor: auto; }
 <div class="hero-glow"></div>
 <div class="hero-number">ES</div>
 <div class="hero-content">
-<p class="hero-tag">Étudiante en Communication · Paris</p>
+<p class="hero-tag">Étudiante en Communication · Paris 1 Panthéon-Sorbonne</p>
 <h1>Emma<br><span class="italic">Stella</span></h1>
 <div class="hero-bottom">
 <p class="hero-desc">
-Master Communication & Management à <strong>Paris 1 Sorbonne</strong>.<br>
+Je suis étudiante en Master 2 Communication & Management à <strong> l'Université Paris 1 Sorbonne</strong>.<br>
 Je conçois des contenus éditoriaux, des stratégies de marque et des outils de communication qui ont du sens — pour des entreprises qui en ont aussi.
 </p>
 <div class="hero-actions">
@@ -667,6 +711,162 @@ Voir le projet →
 <div class="project-highlight">06</div>
 </div>
 
+
+
+<!-- Project 7 - Image 1 -->
+<div class="project-card col-7 reveal">
+  <div class="project-num">07 <span class="project-type">Visuel</span></div>
+  <p class="project-title">Visuel de communication 1</p>
+  <p class="project-client">Emma Stella · Réalisation graphique</p>
+  <p class="project-desc">
+    Création visuelle réalisée dans le cadre d'un projet de communication.
+  </p>
+  <div class="project-tags">
+    <span class="project-tag">Design graphique</span>
+    <span class="project-tag">Identité visuelle</span>
+  </div>
+  <a href="images/image_1.png" target="_blank" class="project-link">Voir l'image →</a>
+  <div class="project-highlight">07</div>
+</div>
+
+<!-- Project 8 - Image 2 -->
+<div class="project-card col-5 reveal">
+  <div class="project-num">08 <span class="project-type">Visuel</span></div>
+  <p class="project-title">Visuel de communication 2</p>
+  <p class="project-client">Emma Stella · Réalisation graphique</p>
+  <p class="project-desc">
+    Création visuelle réalisée dans le cadre d'un projet de communication.
+  </p>
+  <div class="project-tags">
+    <span class="project-tag">Design graphique</span>
+    <span class="project-tag">Identité visuelle</span>
+  </div>
+  <a href="images/image_2.png" target="_blank" class="project-link">Voir l'image →</a>
+  <div class="project-highlight">08</div>
+</div>
+
+<!-- Project 9 - Image 3 -->
+<div class="project-card col-5 reveal">
+  <div class="project-num">09 <span class="project-type">Visuel</span></div>
+  <p class="project-title">Visuel de communication 3</p>
+  <p class="project-client">Emma Stella · Réalisation graphique</p>
+  <p class="project-desc">
+    Création visuelle réalisée dans le cadre d'un projet de communication.
+  </p>
+  <div class="project-tags">
+    <span class="project-tag">Design graphique</span>
+    <span class="project-tag">Identité visuelle</span>
+  </div>
+  <a href="images/image_3.png" target="_blank" class="project-link">Voir l'image →</a>
+  <div class="project-highlight">09</div>
+</div>
+
+<!-- Project 10 - Image 4 -->
+<div class="project-card col-7 reveal">
+  <div class="project-num">10 <span class="project-type">Visuel</span></div>
+  <p class="project-title">Visuel de communication 4</p>
+  <p class="project-client">Emma Stella · Réalisation graphique</p>
+  <p class="project-desc">
+    Création visuelle réalisée dans le cadre d'un projet de communication.
+  </p>
+  <div class="project-tags">
+    <span class="project-tag">Design graphique</span>
+    <span class="project-tag">Identité visuelle</span>
+  </div>
+  <a href="images/image_4.png" target="_blank" class="project-link">Voir l'image →</a>
+  <div class="project-highlight">10</div>
+</div>
+
+<!-- Project 11 - Vidéo 1 -->
+<div class="project-card col-4 reveal">
+  <div class="project-num">11 <span class="project-type">Vidéo</span></div>
+  <p class="project-title">Réalisation vidéo 1</p>
+  <p class="project-client">Emma Stella · Motion</p>
+  <p class="project-desc">Vidéo réalisée dans le cadre d'un projet de communication.</p>
+  <div class="project-tags"><span class="project-tag">Vidéo</span></div>
+  <a href="videos/video_1.mp4" target="_blank" class="project-link">Voir la vidéo →</a>
+  <div class="project-highlight">11</div>
+</div>
+
+<!-- Project 12 - Vidéo 2 -->
+<div class="project-card col-4 reveal">
+  <div class="project-num">12 <span class="project-type">Vidéo</span></div>
+  <p class="project-title">Réalisation vidéo 2</p>
+  <p class="project-client">Emma Stella · Motion</p>
+  <p class="project-desc">Vidéo réalisée dans le cadre d'un projet de communication.</p>
+  <div class="project-tags"><span class="project-tag">Vidéo</span></div>
+  <a href="videos/video_2.mp4" target="_blank" class="project-link">Voir la vidéo →</a>
+  <div class="project-highlight">12</div>
+</div>
+
+<!-- Project 13 - Vidéo 3 -->
+<div class="project-card col-4 reveal">
+  <div class="project-num">13 <span class="project-type">Vidéo</span></div>
+  <p class="project-title">Réalisation vidéo 3</p>
+  <p class="project-client">Emma Stella · Motion</p>
+  <p class="project-desc">Vidéo réalisée dans le cadre d'un projet de communication.</p>
+  <div class="project-tags"><span class="project-tag">Vidéo</span></div>
+  <a href="videos/video_3.mp4" target="_blank" class="project-link">Voir la vidéo →</a>
+  <div class="project-highlight">13</div>
+</div>
+
+<!-- Project 14 - Vidéo 4 -->
+<div class="project-card col-7 reveal">
+  <div class="project-num">14 <span class="project-type">Vidéo</span></div>
+  <p class="project-title">Réalisation vidéo 4</p>
+  <p class="project-client">Emma Stella · Motion</p>
+  <p class="project-desc">Vidéo réalisée dans le cadre d'un projet de communication.</p>
+  <div class="project-tags"><span class="project-tag">Vidéo</span></div>
+  <a href="videos/video_4.mp4" target="_blank" class="project-link">Voir la vidéo →</a>
+  <div class="project-highlight">14</div>
+</div>
+
+<!-- Project 15 - Vidéo 5 -->
+<div class="project-card col-5 reveal">
+  <div class="project-num">15 <span class="project-type">Vidéo</span></div>
+  <p class="project-title">Réalisation vidéo 5</p>
+  <p class="project-client">Emma Stella · Motion</p>
+  <p class="project-desc">Vidéo réalisée dans le cadre d'un projet de communication.</p>
+  <div class="project-tags"><span class="project-tag">Vidéo</span></div>
+  <a href="videos/video_5.mp4" target="_blank" class="project-link">Voir la vidéo →</a>
+  <div class="project-highlight">15</div>
+</div>
+
+
+<!-- Project 16 - Carrousel 1 -->
+<div class="project-card col-5 reveal">
+  <div class="project-num">16 <span class="project-type">Carrousel</span></div>
+  <p class="project-title">Carrousel réseaux sociaux 1</p>
+  <p class="project-client">Confort Service · Réseaux sociaux</p>
+  <p class="project-desc">Visuel réalisé dans le cadre d'une campagne de communication sur les réseaux sociaux.</p>
+  <div class="project-tags"><span class="project-tag">Carrousel</span></div>
+  <a href="caroussels/caroussel_1.png" target="_blank" class="project-link">Voir le visuel →</a>
+  <div class="project-highlight">16</div>
+</div>
+
+<!-- Project 17 - Carrousel 2 -->
+<div class="project-card col-7 reveal">
+  <div class="project-num">17 <span class="project-type">Carrousel</span></div>
+  <p class="project-title">Carrousel réseaux sociaux 2</p>
+  <p class="project-client">Confort Service · Réseaux sociaux</p>
+  <p class="project-desc">Visuel réalisé dans le cadre d'une campagne de communication sur les réseaux sociaux.</p>
+  <div class="project-tags"><span class="project-tag">Carrousel</span></div>
+  <a href="caroussels/caroussel_2.png" target="_blank" class="project-link">Voir le visuel →</a>
+  <div class="project-highlight">17</div>
+</div>
+
+<!-- Project 18 - Carrousel 3 -->
+<div class="project-card col-12 reveal">
+  <div class="project-num">18 <span class="project-type">Carrousel</span></div>
+  <p class="project-title">Carrousel réseaux sociaux 3</p>
+  <p class="project-client">Confort Service · Réseaux sociaux</p>
+  <p class="project-desc">Visuel réalisé dans le cadre d'une campagne de communication sur les réseaux sociaux.</p>
+  <div class="project-tags"><span class="project-tag">Carrousel</span></div>
+  <a href="caroussels/caroussel_3.png" target="_blank" class="project-link">Voir le visuel →</a>
+  <div class="project-highlight">18</div>
+</div>
+
+
 </div>
 </section>
 
@@ -678,11 +878,28 @@ Voir le projet →
 
 <div class="exp-timeline">
 
+
+<div class="exp-item reveal">
+<div class="exp-date">Avr – Juin<br>2026</div>
+<div class="exp-body">
+<p class="exp-role">Chargée de Communication et Rédaction</p>
+<p class="exp-company">Confort Service · Paris</p>
+<p class="exp-desc">Gestion du planning éditorial Instagram, Facebook et TikTok, rédaction de contenus digitaux (posts, scripts vidéo, articles SEO) et création de supports visuels (carrousels, infographies, montages vidéo). Optimisation SEO, veille concurrentielle et prospection de micro-influenceuses. Mission en temps plein.</p>
+<div class="exp-tools">
+<span class="exp-tool">Instagram</span>
+<span class="exp-tool">Facebook</span>
+<span class="exp-tool">TikTok</span>
+<span class="exp-tool">Canva</span>
+<span class="exp-tool">SEO</span>
+</div>
+</div>
+</div>
+
 <div class="exp-item reveal">
 <div class="exp-date">Fév – Juil<br>2024</div>
 <div class="exp-body">
 <p class="exp-role">Assistante Chargée de Communication</p>
-<p class="exp-company">Evolukid · Paris, France</p>
+<p class="exp-company">Evolukid · Paris</p>
 <p class="exp-desc">Gestion des réseaux sociaux, création de contenu (articles, newsletters, communiqués de presse), relations médias, suivi des KPIs et reporting. Mission en temps partiel sur site.</p>
 <div class="exp-tools">
 <span class="exp-tool">Adobe Creative Suite</span>
@@ -713,7 +930,7 @@ Voir le projet →
 <div class="exp-date">Déc 2019 –<br>Juin 2021</div>
 <div class="exp-body">
 <p class="exp-role">Assistante Chargée de Marketing</p>
-<p class="exp-company">Radisson Blue Hotels · France</p>
+<p class="exp-company">Radisson Blue Hotels · Paris</p>
 <p class="exp-desc">Analyse de données marketing via Google Analytics, gestion de campagnes Google Ads, développement de contenus SEO-friendly, coordination avec les équipes internes.</p>
 <div class="exp-tools">
 <span class="exp-tool">Google Analytics</span>
@@ -786,6 +1003,22 @@ Vous avez un<br><em>projet à me</em><br>confier ?
 <span>Communication & Management · Paris 1 Sorbonne</span>
 </footer>
 
+<!-- MODAL IMAGE -->
+<div class="modal-overlay" id="imageModal">
+  <div class="modal-content">
+    <div class="modal-close" onclick="closeModal('imageModal')">✕</div>
+    <img id="modalImageEl" src="" alt="Aperçu">
+  </div>
+</div>
+
+<!-- MODAL VIDEO -->
+<div class="modal-overlay" id="videoModal">
+  <div class="modal-content">
+    <div class="modal-close" onclick="closeModal('videoModal')">✕</div>
+    <video id="modalVideoEl" controls></video>
+  </div>
+</div>
+
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 
 // Custom cursor
@@ -815,3 +1048,38 @@ const obs = new IntersectionObserver((entries) => {
 });
 
 reveals.forEach(el => obs.observe(el));
+
+function openImageModal(src) {
+  document.getElementById('modalImageEl').src = src;
+  document.getElementById('imageModal').classList.add('active');
+}
+
+function openVideoModal(src) {
+  const video = document.getElementById('modalVideoEl');
+  video.src = src;
+  document.getElementById('videoModal').classList.add('active');
+  video.play();
+}
+
+function closeModal(id) {
+  const overlay = document.getElementById(id);
+  overlay.classList.remove('active');
+  if (id === 'videoModal') {
+    const video = document.getElementById('modalVideoEl');
+    video.pause();
+    video.currentTime = 0;
+  }
+}
+
+document.querySelectorAll('.modal-overlay').forEach(overlay => {
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) closeModal(overlay.id);
+  });
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.modal-overlay.active').forEach(o => closeModal(o.id));
+  }
+});
+
